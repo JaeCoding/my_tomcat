@@ -2,8 +2,9 @@ package top.jaecoding.server.exception;
 
 
 /**
- * Created by 王镜鑫 on 2017/2/21 14:04.
- */
+ * @author: 彭文杰
+ * @create: 2017-07-05 19:39
+ **/
 public class ServletException extends Exception {
     private int code;
     private String message;

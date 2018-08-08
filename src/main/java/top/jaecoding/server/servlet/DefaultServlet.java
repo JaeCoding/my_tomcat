@@ -1,5 +1,6 @@
-package top.jaecoding.server;
+package top.jaecoding.server.servlet;
 
+import top.jaecoding.server.ContentTypeEnum;
 import top.jaecoding.server.api.HttpRequest;
 import top.jaecoding.server.api.HttpResponse;
 import top.jaecoding.server.exception.ServletException;
@@ -8,7 +9,7 @@ import java.io.*;
 
 /**
  * @author: 彭文杰
- * @create: 2018-07-04 12:39
+ * @create: 2017-07-04 12:39
  **/
 public class DefaultServlet extends Servlet {
     @Override

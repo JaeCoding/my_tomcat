@@ -2,7 +2,7 @@ package top.jaecoding.server;
 
 /**
  * @author: 彭文杰
- * @create: 2018-07-04 12:14
+ * @create: 2017-07-04 12:14
  **/
 public abstract class ContentTypeEnum {
     //public static final String IMAGE_GIF = "image/gif";

@@ -4,7 +4,9 @@ import java.util.Date;
 
 /**
  * @author: 彭文杰
- * @create: 2018-07-05 15:20
+ * @create: 2017-07-05 15:20
+ *
+ * 用于返回 错误信息及请求头
  **/
 public class ErrorMessage {
     private int code;

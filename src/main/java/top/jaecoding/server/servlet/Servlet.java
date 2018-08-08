@@ -1,16 +1,17 @@
-package top.jaecoding.server;
+package top.jaecoding.server.servlet;
 
 
+import top.jaecoding.server.MethodEnum;
 import top.jaecoding.server.api.HttpRequest;
 import top.jaecoding.server.api.HttpResponse;
 import top.jaecoding.server.exception.ServletException;
 
 /**
  * @author: 彭文杰
- * @create: 2018-07-04 12:12
+ * @create: 2017-07-04 12:12
  **/
 public class Servlet {
-    protected void service(HttpRequest request, HttpResponse response) throws ServletException {
+    public void service(HttpRequest request, HttpResponse response) throws ServletException {
         if(request.getMethod().equals(MethodEnum.GET))
             doGet(request,response);
         if(request.getMethod().equals(MethodEnum.POST))

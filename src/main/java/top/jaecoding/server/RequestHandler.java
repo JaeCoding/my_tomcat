@@ -4,6 +4,8 @@ package top.jaecoding.server;
 import top.jaecoding.server.api.HttpRequest;
 import top.jaecoding.server.api.HttpResponse;
 import top.jaecoding.server.exception.ServletException;
+import top.jaecoding.server.servlet.Context;
+import top.jaecoding.server.servlet.Servlet;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.channels.SocketChannel;
@@ -11,7 +13,7 @@ import java.util.List;
 
 /**
  * @author: 彭文杰
- * @create: 2018-07-04 13:48
+ * @create: 2017-07-04 13:48
  **/
 public abstract class RequestHandler {
 
@@ -32,6 +34,7 @@ public abstract class RequestHandler {
             HttpRequest httpRequest = resolveRequest(s,httpResponse);
             if(httpRequest.getUrl().matches("(.*\\.(html|htm|gif|jpg|jpeg|bmp|png|ico|txt|js|css|woff)$)")){
                 try {
+                    //调用默认defaultServlet的service，处理请求
                     Context.defaultServlet.service(httpRequest,httpResponse);
                 }catch (ServletException e){
                     httpResponse.write(Context.ERROR_404);
